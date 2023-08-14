@@ -1,0 +1,477 @@
+/*
+=============== 
+Fonts
+===============
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+    --attribution-pink: hsl(356, 100%, 78%);
+    --attribution-hover: hsl(356,	100%,	70%);
+    --hot-pink: rgba(247, 71, 128, 1);
+    --light-pink: rgba(255, 167, 195, 1);
+
+    /* primary colors */
+    --light-blue: rgba(54, 56, 77, 1);
+    --dark-blue: rgba(36, 39, 66, 1);
+    --gray: rgba(25, 24, 43, 0.25);
+
+    /* gradient */
+    --gradient-orange: rgba(255, 97, 85, 1);
+    --gradient-pink: rgba(255, 82, 123, 1);
+
+    /* neutrals */
+    --white: rgba(255, 255, 255, 1);
+    --black: hsl(0, 0%, 0%,);
+
+    /* typography */
+    --font-primary: 'Roboto', sans-serif;
+    --font-regular: 400;
+    --font-bold: 700;
+
+    --transition: all 0.3s linear;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: var(--font-primary);
+}
+ul {
+    list-style: none;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* attribution defaults/styles */
+.attribution { 
+  font-size: 0.75rem; 
+  text-align: center;
+  word-spacing: 1.25;
+  letter-spacing: 1.5;
+  color: var(--dark-blue);
+}
+.attribution a { 
+  color: var(--hot-pink);
+  transition: var(--transition);
+  text-decoration: none;
+}
+.attribution a:hover {
+  color: var(--light-pink);
+}
+
+/* fonts */
+body {
+  font-size: var(--font-primary);
+  color: var(--dark-blue);
+}
+
+/*
+=============== 
+Design
+===============
+*/
+
+/* sign-up page */
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+main {
+  min-width: 100vw;
+}
+.subscribe ul {
+  display: flex;
+}
+.subscribe li {
+  font-weight: var(--font-bold);
+}
+.error-message {
+  color: var(--gradient-orange);
+  display: none;
+}
+.email {
+  color: var(--gray);
+  border-color: var(--gray);
+}
+.email {
+  border-radius: 0.5rem;
+  border:1px solid
+}
+button {
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem; 
+  position: relative;
+  background-color: var(--dark-blue);
+  z-index: 1;
+  cursor: pointer;
+}
+button:after {
+  background: linear-gradient(90deg, var(--gradient-pink), var(--gradient-orange));
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  opacity: 0;
+  border-radius: 0.5rem;
+  z-index: -1;
+  transition: var(--transition);
+}
+
+/* success page */
+.success button {
+  color: var(--white);
+  background-color: var(--dark-blue);
+  border-color: transparent;
+}
+.attribution {
+  margin: 0 auto;
+}
+
+/*
+=============== 
+Mobile/Tablet
+===============
+*/
+
+@media screen and (max-width:768px) {
+
+  /* sign-up page */
+  .success {
+    display: none;
+  }
+  .sign-up  {
+    margin: 0 auto;
+    width: 100vw;
+  }
+  .hero {
+    background-image: url(assets/images/illustration-sign-up-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    min-width: 100vw;
+    height: 80vw;
+  }
+  .info {
+    padding: 0 1rem
+  }
+  h1 {
+    font-size: 2.5rem;
+    padding-top: 1rem;
+  }
+  .title p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-top: 1rem;
+  }
+  .services ul {
+    display: block;
+    padding-top: 1rem;
+  }
+  .services li {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-top: 0.5rem;
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+  }
+  .services img {
+    padding-right: 1rem;  
+    padding-bottom: 2rem;
+  }
+  form {
+    margin: 0 auto;
+    padding-top: 1rem;
+  }
+  .subscribe ul {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+  }
+  .subscribe li {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    padding-bottom: 0.5rem;
+  }
+  .email {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    width: 95%;
+  }
+  .email::placeholder {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  button {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .subscribe button {
+    padding: 1rem;
+    width: 95%;
+    margin-bottom: 1rem;
+  }
+
+  /* success page */
+  .success {
+      margin: 0 auto;
+      height: 95vh;
+      text-align: left;
+    }
+  .confirmation {
+    position: relative;
+    height: 95vh;
+    padding: 8rem 1rem 0;
+  }
+  .confirmation img {
+    padding-bottom: 2rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+    line-height: 1;
+    padding-bottom: 1rem;
+  }
+  .confirmation p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .confirmation span {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .confirmation button {
+    width: 90vw;
+    padding: 1rem;
+  }
+  .reset-btn {
+    position: absolute;
+    bottom: 2rem;
+    margin: 0 auto;
+  }
+  /* active */
+  button:active::after {
+    opacity: 1;
+  }
+}
+
+/*
+=============== 
+Tablet/Desktop
+===============
+*/
+@media screen and (min-width:769px) {
+
+  /* sign-up page */
+  .success {
+    display: none;
+  }
+  body {
+    background-color: var(--light-blue);
+    height: 100vh;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .sign-up {
+    margin: auto;
+    width: min-content;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    background-color: var(--white);
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0; 
+    grid-template-areas: 
+      "info hero"
+      "info hero"
+      "info hero"; 
+  }
+  .hero {
+    grid-area: hero; 
+    background-image: url(assets/images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    width: 25rem;
+    height: 37rem;
+    padding: 0;
+  }
+  .info { 
+    grid-area: info; 
+    padding: 0 3rem 0 2rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    }
+  .title h1 {
+    font-size: 3.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+  }
+  .title p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-top: 1rem;
+    letter-spacing: -0.01rem;
+  }
+  .services ul {
+    display: block;
+    padding-top: 1rem;
+    width: max-content;
+  }
+  .services li {
+    font-size: 1rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+  }
+  .services img {
+    padding-right: 1rem;  
+    padding-bottom: 1rem;
+  }
+  .subscribe ul {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+  }
+  .subscribe li {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    padding-bottom: 0.5rem;
+  }
+  .email {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+  }
+  .email::placeholder {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  button {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .subscribe button {
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* success page */
+  .success {
+    margin: 0 auto;
+  }
+  .confirmation {
+    margin: 0 auto;
+    background-color: var(--white);
+    width: min-content;
+    text-align: center;
+    padding: 3rem;
+    border-radius: 1.5rem;
+  }
+  .confirmation img {
+    padding-bottom: 2rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+    line-height: 1;
+    padding-bottom: 1rem;
+    text-align: left;
+  }
+  .confirmation p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+    padding-bottom: 2rem;
+  }
+  .confirmation span {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .confirmation button {
+    padding: 1rem;
+  }
+  .reset-btn {
+    margin: 0 auto;
+    width: 25vw;
+  }
+  .attribution {
+    position: absolute;
+    bottom: 0.5rem;
+    color: white;
+    font-size: 0.75rem;
+  }
+
+  /* active */
+  button:hover::after {
+    opacity: 1;
+  }
+}
+
+
+/*
+=============== 
+Active
+===============
+*/
+.subscribe input:focus {
+  outline: none;
+  color: var(--dark-blue);
+}
+.error .email {
+  color: var(--gradient-orange);
+  border-color: var(--gradient-orange);
+  background-color: rgba(255, 97, 85, 0.25);
+}
+.error .error-message {
+  color: var(--gradient-orange);
+  display: contents;
+}
+.toggle-signup {
+  display: none;
+}
+.toggle-success {
+  display: contents;
+}
+
+
+
+
