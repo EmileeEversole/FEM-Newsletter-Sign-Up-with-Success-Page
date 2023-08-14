@@ -35,11 +35,13 @@ Users should be able to:
 - Solution URL: [GitHub](https://emileeeversole.github.io/FEM-Newsletter-Sign-Up-with-Success-Page/)
 
 ## Finished Product
-Desktop (1440px)
+- Desktop (1440px)
 ![Desktop (1440px)](screenshots/desktop.png)
-Tablet (768px)
+
+- Tablet (768px)
 ![Tablet (768px)](screenshots/tablet.png)
-Mobile (375px)
+
+- Mobile (375px)
 ![Mobile (375px)](screenshots/mobile.png)
 
 ## My process
