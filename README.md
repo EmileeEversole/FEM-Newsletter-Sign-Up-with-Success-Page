@@ -2,10 +2,6 @@
 
 This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-![Desktop](screenshots/desktop.png)
-![Tablet](screenshots/tablet.png)
-![Mobile](screenshots/mobile.png)
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -39,9 +35,13 @@ Users should be able to:
 - Solution URL: [GitHub](https://emileeeversole.github.io/FEM-Newsletter-Sign-Up-with-Success-Page/)
 
 ## Finished Product
-
+Desktop (1440px)
 ![Desktop (1440px)](screenshots/desktop.png)
+
+Tablet (768px)
 ![Tablet (768px)](screenshots/tablet.png)
+
+Mobile (375px)
 ![Mobile (375px)](screenshots/mobile.png)
 
 ## My process
